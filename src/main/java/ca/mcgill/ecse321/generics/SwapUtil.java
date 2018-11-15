@@ -10,7 +10,7 @@ public class SwapUtil {
 	 * @param i
 	 * @param j
 	 */
-    public static void swap(List l, int i, int j){
+    public static <T> void swap(List<T> l, int i, int j){
         int lower, greater;
     	if(i<j) {
         	lower = i;
@@ -19,7 +19,7 @@ public class SwapUtil {
         	lower = j;
         	greater = i;        	
         }
-    	Object temp = l.get(greater);
+    	T temp = l.get(greater);
         l.remove(greater);
         l.add(l.get(lower));
         l.remove(lower);
